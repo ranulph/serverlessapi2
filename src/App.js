@@ -13,7 +13,7 @@ const getImages = async query => {
     return resp.json()
 }
 
-export function App() {
+function App() {
     const [query, setQuery] = useState("")
     const [images, setImages] = useState([])
 
@@ -40,6 +40,6 @@ export function App() {
         </div>
     )
 
+}
 
-
-};
+export default App;
