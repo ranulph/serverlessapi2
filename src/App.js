@@ -13,7 +13,7 @@ const getImages = async query => {
     return resp.json()
 }
 
-export default function App() {
+export function App() {
     const [query, setQuery] = useState("")
     const [images, setImages] = useState([])
 
