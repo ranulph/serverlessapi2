@@ -14,5 +14,32 @@ const getImages = async query => {
 }
 
 export function App() {
+    const [query, setQuery] = useState("")
+    const [images, setImages] = useState([])
 
-}
+    const search = async () => {
+        const results = await getImages(query)
+        setImages(results)
+    }
+
+    const updateQuery = evt => setQuery(evt.target.value)
+
+    return (
+        <div className="App">
+            <div class="form">
+                <input id="query" type="text" onChange={updateQuery} placeholder="Search query" />
+                <button onClick={search}>Search</button>
+            </div>
+
+            {images.map(image =>
+                <a key={image.id} href={image.link} target="_blank">
+                    <img src={image.image} /> 
+                </a>
+            )}
+
+        </div>
+    )
+
+
+
+};
