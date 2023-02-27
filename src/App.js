@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react'
 
 const getImages = async query => {
@@ -12,7 +13,7 @@ const getImages = async query => {
     return resp.json()
 }
 
-function App() {
+export default function App() {
     const [query, setQuery] = useState("")
     const [images, setImages] = useState([])
 
