@@ -28,7 +28,7 @@ function App() {
         <div className="App">
             <div class="form">
                 <input id="query" type="text" onChange={updateQuery} placeholder="Search query" />
-                <button onClick={search}>Search</button>
+                <button onClick={search}>Seaaarch</button>
             </div>
 
             {images.map(image =>
